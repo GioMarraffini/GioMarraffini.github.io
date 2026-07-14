@@ -272,6 +272,60 @@ section { padding: clamp(64px, 9vw, 118px) 0; border-top: 1px solid var(--border
 .gg-note { margin: 24px 0 0; font-size: .8rem; color: var(--faint); line-height: 1.55; border-top: 1px solid var(--border); padding-top: 16px; }
 @media (max-width: 760px) { .gg-grid { grid-template-columns: 1fr; } }
 
+/* ---- Inline demo (details/summary) + standout Play button ---- */
+.pub-demo { grid-column: 1 / -1; margin-top: 6px; }
+.play-btn {
+  display: inline-flex; align-items: center; gap: 10px; cursor: pointer; width: fit-content;
+  list-style: none; -webkit-tap-highlight-color: transparent;
+  font-family: var(--font-sans); font-weight: 600; font-size: .93rem; color: #fff;
+  background: linear-gradient(135deg, #4260a0, #2b4270); background-size: 180% 180%;
+  padding: 12px 20px; border-radius: 11px; border: 0;
+  box-shadow: 0 6px 18px color-mix(in srgb, var(--accent) 34%, transparent);
+  transition: transform .18s ease, box-shadow .18s ease;
+  animation: playpulse 2.8s ease-in-out infinite;
+}
+.play-btn::-webkit-details-marker { display: none; }
+.play-btn::marker { content: ""; }
+.play-btn:hover { transform: translateY(-2px); box-shadow: 0 12px 30px color-mix(in srgb, var(--accent) 48%, transparent); }
+.play-btn:focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+.play-ico { width: 17px; height: 17px; flex: none; }
+.play-btn .lbl-close { display: none; }
+details[open] .play-btn .lbl-open { display: none; }
+details[open] .play-btn .lbl-close { display: inline; }
+details[open] .play-btn { animation: none; background: var(--accent); }
+@keyframes playpulse {
+  0%, 100% { box-shadow: 0 6px 16px color-mix(in srgb, var(--accent) 26%, transparent); }
+  50%      { box-shadow: 0 8px 30px color-mix(in srgb, var(--accent) 58%, transparent); }
+}
+
+.pub-demo-panel {
+  margin-top: 18px; background: var(--bg-tint); border: 1px solid var(--border);
+  border-radius: 13px; padding: clamp(18px, 2.6vw, 30px);
+  animation: demofade .38s ease;
+}
+@keyframes demofade { from { opacity: 0; transform: translateY(-8px); } to { opacity: 1; transform: none; } }
+.demo-intro { font-size: .96rem; color: var(--muted); line-height: 1.55; margin: 0 0 22px; max-width: 68ch; }
+.demo-intro strong { color: var(--text); }
+
+/* ---- Skewness widget (Variance Brain paper) ---- */
+.sk-grid { display: grid; grid-template-columns: 1fr 1fr; gap: clamp(24px, 4vw, 46px); align-items: center; }
+.sk-readout { display: flex; gap: 22px; flex-wrap: wrap; margin-top: 18px; }
+.sk-readout span { font-size: .8rem; color: var(--muted); }
+.sk-readout b { font-family: var(--font-serif); font-size: 1.18rem; color: var(--text); margin-left: 5px; }
+.sk-result { margin: 16px 0 0; font-size: .95rem; color: var(--text); line-height: 1.55; }
+.sk-result strong { color: var(--accent); }
+.sk-plot { width: 100%; height: auto; display: block; overflow: visible; }
+.sk-curve { fill: color-mix(in srgb, var(--accent) 16%, transparent); stroke: var(--accent); stroke-width: 2; stroke-linejoin: round; transition: d .12s ease; }
+.sk-meanline { stroke: var(--faint); stroke-width: 1.4; stroke-dasharray: 4 4; }
+.sk-axlbl { fill: var(--faint); font: 600 10.5px var(--font-sans); }
+@media (max-width: 760px) { .sk-grid { grid-template-columns: 1fr; } }
+
+@media (prefers-reduced-motion: reduce) {
+  .play-btn { animation: none; }
+  .pub-demo-panel { animation: none; }
+  .sk-curve { transition: none; }
+}
+
 /* ---- Reveal on scroll (only hidden when JS is available) ---- */
 .js .reveal { opacity: 0; transform: translateY(22px); transition: opacity .6s ease, transform .6s ease; }
 .js .reveal.in { opacity: 1; transform: none; }

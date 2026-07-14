@@ -37,7 +37,6 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#publications">Publications</a></li>
-        <li><a href="#playground">Play</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#conferences">Conferences</a></li>
@@ -149,6 +148,37 @@
                 <a class="tag" href="https://arxiv.org/abs/2606.04010" target="_blank" rel="noopener">arXiv</a>
               </div>
             </div>
+            <details class="pub-demo">
+              <summary class="play-btn">
+                <svg class="play-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l14 8-14 8z" fill="currentColor" stroke="none"/></svg>
+                <span class="lbl-open">Play — what do billion-parameter models forget?</span>
+                <span class="lbl-close">Hide demo</span>
+              </summary>
+              <div class="pub-demo-panel" id="sk">
+                <p class="demo-intro">Brain foundation models preserve a signal's <strong>variance</strong> (second-order structure) but largely destroy its <strong>co-skewness</strong> (third-order structure) — and it's that third-order signal that predicts cognition. Drag the skew and watch what a second-order model can't see.</p>
+                <div class="sk-grid">
+                  <div class="sk-controls">
+                    <input id="skSlider" class="gg-slider" type="range" min="-60" max="60" step="1" value="0" aria-label="Skewness of the distribution">
+                    <div class="gg-scale"><span>&#8592; left tail</span><span class="now">Symmetric</span><span>right tail &#8594;</span></div>
+                    <div class="sk-readout">
+                      <span>Mean <b id="skMean">0.00</b></span>
+                      <span>Variance <b id="skVar">1.00</b></span>
+                      <span>Skewness <b id="skSkew">+0.00</b></span>
+                    </div>
+                    <p class="sk-result" id="skResult">Drag the slider to reshape the distribution.</p>
+                  </div>
+                  <div class="sk-viz">
+                    <svg class="sk-plot" viewBox="0 0 320 210" role="img" aria-label="Distribution whose skewness changes while mean and variance stay fixed">
+                      <path id="skCurve" class="sk-curve" d=""></path>
+                      <line id="skMeanLine" class="sk-meanline" x1="164" y1="24" x2="164" y2="190"></line>
+                      <line class="gg-axis" x1="20" y1="190" x2="308" y2="190"></line>
+                      <text class="sk-axlbl" x="164" y="205" text-anchor="middle">mean fixed &nbsp;·&nbsp; variance fixed</text>
+                    </svg>
+                  </div>
+                </div>
+                <p class="gg-note">A conceptual illustration of the paper's core result: mean and variance stay pinned while only the <em>third-order</em> structure changes — the "variance the models forgot." A model that captures a signal only up to second order cannot tell these distributions apart, yet the third-order signal is what tracks cognition.</p>
+              </div>
+            </details>
           </article>
 
           <article class="pub reveal">
@@ -232,66 +262,61 @@
                 <a class="tag" href="https://github.com/noehsueh/greatest-good-benchmark" target="_blank" rel="noopener">Code</a>
               </div>
             </div>
+            <details class="pub-demo">
+              <summary class="play-btn">
+                <svg class="play-ico" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M6 4l14 8-14 8z" fill="currentColor" stroke="none"/></svg>
+                <span class="lbl-open">Play — are you more utilitarian than the models?</span>
+                <span class="lbl-close">Hide demo</span>
+              </summary>
+              <div class="pub-demo-panel" id="gg">
+                <p class="demo-intro">Rate each statement from the <strong>Oxford Utilitarianism Scale</strong> — the same construct my benchmark probes in language models — and watch yourself move on the map.</p>
+                <div class="gg-grid">
+                  <div class="gg-items">
+                    <div class="gg-item">
+                      <p class="gg-q"><span class="gg-tag ib">Impartial beneficence</span> We should give the well-being of a stranger on the other side of the world the same moral weight as someone close to us.</p>
+                      <input id="ggIB1" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: equal moral weight to strangers">
+                      <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIB1v">Neutral</span><span>Strongly agree</span></div>
+                    </div>
+                    <div class="gg-item">
+                      <p class="gg-q"><span class="gg-tag ib">Impartial beneficence</span> It is wrong to keep money you don't really need if you could instead donate it to save lives.</p>
+                      <input id="ggIB2" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: wrong to keep money you could donate">
+                      <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIB2v">Neutral</span><span>Strongly agree</span></div>
+                    </div>
+                    <div class="gg-item">
+                      <p class="gg-q"><span class="gg-tag ih">Instrumental harm</span> It can be morally right to harm one innocent person if that is the only way to save several others.</p>
+                      <input id="ggIH1" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: harm one to save several">
+                      <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIH1v">Neutral</span><span>Strongly agree</span></div>
+                    </div>
+                    <div class="gg-item">
+                      <p class="gg-q"><span class="gg-tag ih">Instrumental harm</span> Torturing one person could be justified if it were the only way to stop an attack that would kill hundreds.</p>
+                      <input id="ggIH2" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: torture justified to stop mass attack">
+                      <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIH2v">Neutral</span><span>Strongly agree</span></div>
+                    </div>
+                  </div>
+                  <div class="gg-viz">
+                    <svg class="gg-plot" viewBox="0 0 300 300" role="img" aria-label="Moral profile map: instrumental harm versus impartial beneficence">
+                      <ellipse class="gg-zone" cx="98" cy="76" rx="54" ry="46"></ellipse>
+                      <text class="gg-zone-lbl" x="98" y="72" text-anchor="middle">LLMs</text>
+                      <text class="gg-zone-sub" x="98" y="87" text-anchor="middle">tended to land here</text>
+                      <line class="gg-axis" x1="46" y1="254" x2="290" y2="254"></line>
+                      <line class="gg-axis" x1="46" y1="20" x2="46" y2="254"></line>
+                      <text class="gg-axlbl" x="168" y="285" text-anchor="middle">Instrumental harm &#8594;</text>
+                      <text class="gg-axlbl" x="18" y="137" text-anchor="middle" transform="rotate(-90 18 137)">Impartial beneficence &#8594;</text>
+                      <circle class="gg-dot" id="ggDot" cx="168" cy="139" r="7.5"></circle>
+                    </svg>
+                    <div class="gg-readout">
+                      <span>Impartial beneficence <b id="ggIB">50%</b></span>
+                      <span>Instrumental harm <b id="ggIH">50%</b></span>
+                    </div>
+                    <p class="gg-result" id="ggResult">Move the sliders to place yourself on the map.</p>
+                    <button class="gg-reset" id="ggReset" type="button">Reset to neutral</button>
+                  </div>
+                </div>
+                <p class="gg-note">This mirrors what the benchmark probes in language models. The highlighted region illustrates the paper's headline finding — most models cluster toward strong <em>impartial beneficence</em> while rejecting <em>instrumental harm</em> — rather than exact per-model coordinates.</p>
+              </div>
+            </details>
           </article>
 
-        </div>
-      </div>
-    </section>
-
-    <!-- ============ Interactive ============ -->
-    <section id="playground">
-      <div class="container">
-        <div class="section-head reveal">
-          <p class="overline">Interactive · from my research</p>
-          <h2>How utilitarian are you?</h2>
-          <p class="lede">My EMNLP 2024 paper, <a href="https://aclanthology.org/2024.emnlp-main.1224/" target="_blank" rel="noopener">The Greatest Good Benchmark</a>, measures how large language models resolve utilitarian moral dilemmas along two axes from the Oxford Utilitarianism Scale. Answer the same kind of statements, watch yourself move on the map — and see where the models landed.</p>
-        </div>
-
-        <div class="gg-card reveal" id="gg">
-          <div class="gg-grid">
-            <div class="gg-items">
-              <div class="gg-item">
-                <p class="gg-q"><span class="gg-tag ib">Impartial beneficence</span> We should give the well-being of a stranger on the other side of the world the same moral weight as someone close to us.</p>
-                <input id="ggIB1" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: equal moral weight to strangers">
-                <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIB1v">Neutral</span><span>Strongly agree</span></div>
-              </div>
-              <div class="gg-item">
-                <p class="gg-q"><span class="gg-tag ib">Impartial beneficence</span> It is wrong to keep money you don't really need if you could instead donate it to save lives.</p>
-                <input id="ggIB2" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: wrong to keep money you could donate">
-                <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIB2v">Neutral</span><span>Strongly agree</span></div>
-              </div>
-              <div class="gg-item">
-                <p class="gg-q"><span class="gg-tag ih">Instrumental harm</span> It can be morally right to harm one innocent person if that is the only way to save several others.</p>
-                <input id="ggIH1" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: harm one to save several">
-                <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIH1v">Neutral</span><span>Strongly agree</span></div>
-              </div>
-              <div class="gg-item">
-                <p class="gg-q"><span class="gg-tag ih">Instrumental harm</span> Torturing one person could be justified if it were the only way to stop an attack that would kill hundreds.</p>
-                <input id="ggIH2" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: torture justified to stop mass attack">
-                <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIH2v">Neutral</span><span>Strongly agree</span></div>
-              </div>
-            </div>
-
-            <div class="gg-viz">
-              <svg class="gg-plot" viewBox="0 0 300 300" role="img" aria-label="Moral profile map: instrumental harm versus impartial beneficence">
-                <ellipse class="gg-zone" cx="98" cy="76" rx="54" ry="46"></ellipse>
-                <text class="gg-zone-lbl" x="98" y="72" text-anchor="middle">LLMs</text>
-                <text class="gg-zone-sub" x="98" y="87" text-anchor="middle">tended to land here</text>
-                <line class="gg-axis" x1="46" y1="254" x2="290" y2="254"></line>
-                <line class="gg-axis" x1="46" y1="20" x2="46" y2="254"></line>
-                <text class="gg-axlbl" x="168" y="285" text-anchor="middle">Instrumental harm &#8594;</text>
-                <text class="gg-axlbl" x="18" y="137" text-anchor="middle" transform="rotate(-90 18 137)">Impartial beneficence &#8594;</text>
-                <circle class="gg-dot" id="ggDot" cx="168" cy="139" r="7.5"></circle>
-              </svg>
-              <div class="gg-readout">
-                <span>Impartial beneficence <b id="ggIB">50%</b></span>
-                <span>Instrumental harm <b id="ggIH">50%</b></span>
-              </div>
-              <p class="gg-result" id="ggResult">Move the sliders to place yourself on the map.</p>
-              <button class="gg-reset" id="ggReset" type="button">Reset to neutral</button>
-            </div>
-          </div>
-          <p class="gg-note">This mirrors what the benchmark probes in language models. The highlighted region illustrates the paper's headline finding — most models cluster toward strong <em>impartial beneficence</em> while rejecting <em>instrumental harm</em> — rather than exact per-model coordinates.</p>
         </div>
       </div>
     </section>
@@ -679,6 +704,67 @@
 
       update();
       result.innerHTML = 'Move the sliders to place yourself on the map.';
+    })();
+  </script>
+
+  <!-- Interactive: Variance Brain (skewness) -->
+  <script>
+    (function () {
+      var sk = document.getElementById('sk');
+      if (!sk) return;
+      var slider = document.getElementById('skSlider');
+      var curve = document.getElementById('skCurve');
+      var skewOut = document.getElementById('skSkew');
+      var result = document.getElementById('skResult');
+      var nowLbl = sk.querySelector('.gg-scale .now');
+      if (!slider || !curve) return;
+
+      // plot geometry (matches viewBox 0 0 320 210)
+      var PX0 = 20, PX1 = 308, PY0 = 24, PYB = 190, N = 150, T0 = -3.6, T1 = 3.6;
+
+      function erf(x) { // Abramowitz–Stegun 7.1.26
+        var s = x < 0 ? -1 : 1; x = Math.abs(x);
+        var t = 1 / (1 + 0.3275911 * x);
+        var y = 1 - (((((1.061405429 * t - 1.453152027) * t) + 1.421413741) * t - 0.284496736) * t + 0.254829592) * t * Math.exp(-x * x);
+        return s * y;
+      }
+      function phi(x) { return Math.exp(-x * x / 2) / Math.sqrt(2 * Math.PI); }
+      function Phi(x) { return 0.5 * (1 + erf(x / Math.SQRT2)); }
+      function params(a) {
+        var d = a / Math.sqrt(1 + a * a);
+        var m = d * Math.sqrt(2 / Math.PI);
+        var v = 1 - 2 * d * d / Math.PI;
+        var skew = ((4 - Math.PI) / 2) * Math.pow(d * Math.sqrt(2 / Math.PI), 3) / Math.pow(v, 1.5);
+        return { a: a, mean: m, std: Math.sqrt(v), skew: skew };
+      }
+      // standardized skew-normal pdf (always mean 0, variance 1)
+      function pdf(p, t) { var x = p.mean + p.std * t; return p.std * 2 * phi(x) * Phi(p.a * x); }
+
+      // fixed y-scale so nothing clips and equal areas read as equal variance
+      var gmax = 0, aa, i, t;
+      for (aa = -6; aa <= 6; aa += 0.5) { var pp = params(aa); for (i = 0; i <= N; i++) { t = T0 + (T1 - T0) * i / N; var y = pdf(pp, t); if (y > gmax) gmax = y; } }
+      var scaleY = (PYB - PY0) / (gmax * 1.05);
+
+      function update() {
+        var p = params(+slider.value / 10);
+        var d = '';
+        for (i = 0; i <= N; i++) {
+          t = T0 + (T1 - T0) * i / N;
+          var px = PX0 + (PX1 - PX0) * i / N;
+          var py = PYB - pdf(p, t) * scaleY;
+          d += (i === 0 ? 'M' : 'L') + px.toFixed(1) + ' ' + py.toFixed(1);
+        }
+        d += 'L' + PX1.toFixed(1) + ' ' + PYB + ' L' + PX0.toFixed(1) + ' ' + PYB + ' Z';
+        curve.setAttribute('d', d);
+        var sgn = p.skew >= 0 ? '+' : '';
+        skewOut.textContent = sgn + p.skew.toFixed(2);
+        if (nowLbl) nowLbl.textContent = Math.abs(p.skew) < 0.03 ? 'Symmetric' : (p.skew > 0 ? 'Right-skewed' : 'Left-skewed');
+        result.innerHTML = 'Mean and variance stay pinned at <strong>0.00</strong> and <strong>1.00</strong> — a model that captures only up to second order sees <strong>no change</strong>. Yet the skewness is now <strong>' + sgn + p.skew.toFixed(2) + '</strong>: the third-order structure has shifted entirely. That is the signal the models forget — and the one that predicts cognition.';
+      }
+
+      slider.addEventListener('input', update);
+      update();
+      result.innerHTML = 'Drag the slider to reshape the distribution.';
     })();
   </script>
 
