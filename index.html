@@ -14,7 +14,9 @@
   <meta property="og:type" content="website">
   <meta property="og:image" content="assets/images/about/profile_image.jpg">
 
-  <link rel="shortcut icon" type="image/png" href="assets/logo/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/logo/favicon.svg">
+  <link rel="icon" type="image/png" href="assets/logo/favicon.png">
+  <link rel="apple-touch-icon" href="assets/logo/favicon.png">
 
   <!-- Fonts -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -35,6 +37,7 @@
       <ul class="nav-links" id="nav-links">
         <li><a href="#about">About</a></li>
         <li><a href="#publications">Publications</a></li>
+        <li><a href="#playground">Play</a></li>
         <li><a href="#experience">Experience</a></li>
         <li><a href="#education">Education</a></li>
         <li><a href="#conferences">Conferences</a></li>
@@ -231,6 +234,64 @@
             </div>
           </article>
 
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Interactive ============ -->
+    <section id="playground">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="overline">Interactive · from my research</p>
+          <h2>How utilitarian are you?</h2>
+          <p class="lede">My EMNLP 2024 paper, <a href="https://aclanthology.org/2024.emnlp-main.1224/" target="_blank" rel="noopener">The Greatest Good Benchmark</a>, measures how large language models resolve utilitarian moral dilemmas along two axes from the Oxford Utilitarianism Scale. Answer the same kind of statements, watch yourself move on the map — and see where the models landed.</p>
+        </div>
+
+        <div class="gg-card reveal" id="gg">
+          <div class="gg-grid">
+            <div class="gg-items">
+              <div class="gg-item">
+                <p class="gg-q"><span class="gg-tag ib">Impartial beneficence</span> We should give the well-being of a stranger on the other side of the world the same moral weight as someone close to us.</p>
+                <input id="ggIB1" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: equal moral weight to strangers">
+                <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIB1v">Neutral</span><span>Strongly agree</span></div>
+              </div>
+              <div class="gg-item">
+                <p class="gg-q"><span class="gg-tag ib">Impartial beneficence</span> It is wrong to keep money you don't really need if you could instead donate it to save lives.</p>
+                <input id="ggIB2" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: wrong to keep money you could donate">
+                <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIB2v">Neutral</span><span>Strongly agree</span></div>
+              </div>
+              <div class="gg-item">
+                <p class="gg-q"><span class="gg-tag ih">Instrumental harm</span> It can be morally right to harm one innocent person if that is the only way to save several others.</p>
+                <input id="ggIH1" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: harm one to save several">
+                <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIH1v">Neutral</span><span>Strongly agree</span></div>
+              </div>
+              <div class="gg-item">
+                <p class="gg-q"><span class="gg-tag ih">Instrumental harm</span> Torturing one person could be justified if it were the only way to stop an attack that would kill hundreds.</p>
+                <input id="ggIH2" class="gg-slider" type="range" min="1" max="7" step="1" value="4" aria-label="Agreement: torture justified to stop mass attack">
+                <div class="gg-scale"><span>Strongly disagree</span><span class="now" id="ggIH2v">Neutral</span><span>Strongly agree</span></div>
+              </div>
+            </div>
+
+            <div class="gg-viz">
+              <svg class="gg-plot" viewBox="0 0 300 300" role="img" aria-label="Moral profile map: instrumental harm versus impartial beneficence">
+                <ellipse class="gg-zone" cx="98" cy="76" rx="54" ry="46"></ellipse>
+                <text class="gg-zone-lbl" x="98" y="72" text-anchor="middle">LLMs</text>
+                <text class="gg-zone-sub" x="98" y="87" text-anchor="middle">tended to land here</text>
+                <line class="gg-axis" x1="46" y1="254" x2="290" y2="254"></line>
+                <line class="gg-axis" x1="46" y1="20" x2="46" y2="254"></line>
+                <text class="gg-axlbl" x="168" y="285" text-anchor="middle">Instrumental harm &#8594;</text>
+                <text class="gg-axlbl" x="18" y="137" text-anchor="middle" transform="rotate(-90 18 137)">Impartial beneficence &#8594;</text>
+                <circle class="gg-dot" id="ggDot" cx="168" cy="139" r="7.5"></circle>
+              </svg>
+              <div class="gg-readout">
+                <span>Impartial beneficence <b id="ggIB">50%</b></span>
+                <span>Instrumental harm <b id="ggIH">50%</b></span>
+              </div>
+              <p class="gg-result" id="ggResult">Move the sliders to place yourself on the map.</p>
+              <button class="gg-reset" id="ggReset" type="button">Reset to neutral</button>
+            </div>
+          </div>
+          <p class="gg-note">This mirrors what the benchmark probes in language models. The highlighted region illustrates the paper's headline finding — most models cluster toward strong <em>impartial beneficence</em> while rejecting <em>instrumental harm</em> — rather than exact per-model coordinates.</p>
         </div>
       </div>
     </section>
@@ -546,6 +607,78 @@
         }, { rootMargin: '-45% 0px -50% 0px' });
         sections.forEach(function (s) { spy.observe(s); });
       }
+    })();
+  </script>
+
+  <!-- Interactive: The Greatest Good -->
+  <script>
+    (function () {
+      var gg = document.getElementById('gg');
+      if (!gg) return;
+      var ids = ['ggIB1', 'ggIB2', 'ggIH1', 'ggIH2'];
+      var sliders = ids.map(function (id) { return document.getElementById(id); });
+      if (sliders.some(function (s) { return !s; })) return;
+
+      var dot = document.getElementById('ggDot');
+      var ibOut = document.getElementById('ggIB');
+      var ihOut = document.getElementById('ggIH');
+      var result = document.getElementById('ggResult');
+      var reset = document.getElementById('ggReset');
+
+      // plot geometry (matches the SVG viewBox)
+      var X0 = 46, X1 = 290, Y0 = 20, Y1 = 254;
+      var WORDS = ['', 'Strongly disagree', 'Disagree', 'Slightly disagree', 'Neutral', 'Slightly agree', 'Agree', 'Strongly agree'];
+
+      function val(id) { return +document.getElementById(id).value; }
+      function scaleTo100(a, b) { return ((a + b) / 2 - 1) / 6 * 100; }
+
+      function lean(v) { return v >= 66 ? 'high' : v >= 40 ? 'moderate' : 'low'; }
+
+      function verdict(ib, ih) {
+        var vsIH = ih < 22 ? 'Like the models, you mostly <strong>reject instrumental harm</strong>'
+                 : ih < 48 ? 'You accept <strong>instrumental harm</strong> a little more readily than the models did'
+                 : 'You accept <strong>instrumental harm</strong> far more than the models, which strongly rejected it';
+        var vsIB = ib > 66 ? ', and — like them — you show <strong>strong impartial beneficence</strong>.'
+                 : ib > 40 ? ', while showing <strong>moderate impartial beneficence</strong>.'
+                 : ', while showing <strong>low impartial beneficence</strong>, unlike the models.';
+        return 'Your profile: <strong>' + Math.round(ib) + '%</strong> impartial beneficence, <strong>' +
+               Math.round(ih) + '%</strong> instrumental harm. ' + vsIH + vsIB;
+      }
+
+      function update() {
+        var ib = scaleTo100(val('ggIB1'), val('ggIB2'));
+        var ih = scaleTo100(val('ggIH1'), val('ggIH2'));
+        var px = X0 + ih / 100 * (X1 - X0);
+        var py = Y1 - ib / 100 * (Y1 - Y0);
+        dot.setAttribute('cx', px.toFixed(1));
+        dot.setAttribute('cy', py.toFixed(1));
+        ibOut.textContent = Math.round(ib) + '%';
+        ihOut.textContent = Math.round(ih) + '%';
+        result.innerHTML = verdict(ib, ih);
+      }
+
+      sliders.forEach(function (s) {
+        s.addEventListener('input', function () {
+          var lbl = document.getElementById(s.id + 'v');
+          if (lbl) lbl.textContent = WORDS[+s.value];
+          update();
+        });
+      });
+
+      if (reset) {
+        reset.addEventListener('click', function () {
+          sliders.forEach(function (s) {
+            s.value = 4;
+            var lbl = document.getElementById(s.id + 'v');
+            if (lbl) lbl.textContent = WORDS[4];
+          });
+          update();
+          result.innerHTML = 'Move the sliders to place yourself on the map.';
+        });
+      }
+
+      update();
+      result.innerHTML = 'Move the sliders to place yourself on the map.';
     })();
   </script>
 
