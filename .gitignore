@@ -1,0 +1,15 @@
+# Claude Code / local config
+.claude
+.env
+
+# OS / editor cruft
+.DS_Store
+Thumbs.db
+*.log
+.vscode/
+.idea/
+*.swp
+*~
+
+# Temporary screenshot/scratch files
+_*.png

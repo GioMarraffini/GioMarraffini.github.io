@@ -1,922 +1,553 @@
 <!doctype html>
-<html class="no-js" lang="en">
+<html lang="en">
+<head>
+  <script>document.documentElement.classList.add('js');</script>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Giovanni Marraffini — AI Safety, Interpretability & Computational Neuroscience</title>
+  <meta name="description" content="Giovanni Marraffini — PhD candidate at INRIA & Université Paris-Saclay working on AI safety, interpretability, large language models, and computational neuroscience. Publications at ACL, EMNLP, NeurIPS, and ICML.">
+  <meta name="author" content="Giovanni Marraffini">
 
-    <head>
-        <!-- meta data -->
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+  <!-- Open Graph -->
+  <meta property="og:title" content="Giovanni Marraffini">
+  <meta property="og:description" content="PhD candidate at the intersection of AI and cognition — AI safety, interpretability, large language models, and computational neuroscience.">
+  <meta property="og:type" content="website">
+  <meta property="og:image" content="assets/images/about/profile_image.jpg">
 
-        <!--font-family-->
-		<link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900&amp;subset=devanagari,latin-ext" rel="stylesheet">
-        
-        <!-- title of site -->
-        <title>Giovanni Marraffini</title>
+  <link rel="shortcut icon" type="image/png" href="assets/logo/favicon.png">
 
-        <!-- For favicon png -->
-		<link rel="shortcut icon" type="image/icon" href="assets/logo/favicon.png"/>
-       
-        <!--font-awesome.min.css-->
-        <link rel="stylesheet" href="assets/css/font-awesome.min.css">
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400;1,6..72,500&display=swap" rel="stylesheet">
 
-		<!--flat icon css-->
-		<link rel="stylesheet" href="assets/css/flaticon.css">
+  <link rel="stylesheet" href="assets/css/site.css">
+</head>
+<body>
 
-		<!--animate.css-->
-        <link rel="stylesheet" href="assets/css/animate.css">
+  <!-- ============ Header ============ -->
+  <header class="site-header" id="site-header">
+    <div class="container nav">
+      <a class="brand" href="#top">Giovanni <span>Marraffini</span></a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle menu" aria-expanded="false">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"><path d="M4 7h16M4 12h16M4 17h16"/></svg>
+      </button>
+      <ul class="nav-links" id="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#publications">Publications</a></li>
+        <li><a href="#experience">Experience</a></li>
+        <li><a href="#education">Education</a></li>
+        <li><a href="#conferences">Conferences</a></li>
+        <li><a href="#skills">Skills</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </div>
+  </header>
 
-        <!--owl.carousel.css-->
-        <link rel="stylesheet" href="assets/css/owl.carousel.min.css">
-		<link rel="stylesheet" href="assets/css/owl.theme.default.min.css">
-		
-        <!--bootstrap.min.css-->
-        <link rel="stylesheet" href="assets/css/bootstrap.min.css">
-		
-		<!-- bootsnav -->
-		<link rel="stylesheet" href="assets/css/bootsnav.css" >	
-        
-        <!--style.css-->
-        <link rel="stylesheet" href="assets/css/style.css">
-        
-        <!--responsive.css-->
-        <link rel="stylesheet" href="assets/css/responsive.css">
-        
-        <!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
-        <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
-		
-        <!--[if lt IE 9]>
-			<script src="https://oss.maxcdn.com/html5shiv/3.7.3/html5shiv.min.js"></script>
-			<script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
-        <![endif]-->
+  <main id="top">
 
-    </head>
-	
-	<body>
-		<!--[if lte IE 9]>
-            <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
-        <![endif]-->
-		
-		<!-- top-area Start -->
-		<header class="top-area">
-			<div class="header-area">
-				<!-- Start Navigation -->
-			    <nav class="navbar navbar-default bootsnav navbar-fixed dark no-background">
+    <!-- ============ Hero ============ -->
+    <section class="hero container" style="border-top:0;">
+      <div class="hero-grid">
+        <div class="hero-text reveal">
+          <span class="hero-eyebrow"><span class="dot"></span> Available for research collaborations</span>
+          <h1>Giovanni <em>Marraffini</em></h1>
+          <p class="role">PhD Candidate · LLMs, AI Safety &amp; Computational Neuroscience</p>
+          <p class="blurb">I work at the intersection of AI and cognition at INRIA &amp; Université Paris-Saclay — spanning AI safety and interpretability, and bridging large language models, brain data, and the study of the mind.</p>
 
-			        <div class="container">
+          <div class="hero-actions">
+            <a class="btn btn-primary" href="assets/download/Giovanni_Marraffini_Resume.pdf" download>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3v12m0 0l-4-4m4 4l4-4M5 21h14"/></svg>
+              Download CV
+            </a>
+            <a class="btn btn-ghost" href="#publications">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 5h11M4 10h11M4 15h7"/><path d="M18 8v9m0 0l3-3m-3 3l-3-3"/></svg>
+              View publications
+            </a>
+          </div>
 
-			            <!-- Start Header Navigation -->
-			            <div class="navbar-header">
-			                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-menu">
-			                    <i class="fa fa-bars"></i>
-			                </button>
-			                <a class="navbar-brand" href="index.html">Giovanni</a>
-			            </div><!--/.navbar-header-->
-			            <!-- End Header Navigation -->
+          <div class="hero-socials">
+            <a class="icon-btn" href="mailto:giovanni.marraffini@gmail.com" aria-label="Email" title="Email">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+            </a>
+            <a class="icon-btn" href="https://scholar.google.com/citations?user=EeGGmbQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar" title="Google Scholar">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v3.5L12 21l7-4.32v-3.5L12 17l-7-3.82z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://github.com/GioMarraffini" target="_blank" rel="noopener" aria-label="GitHub" title="GitHub">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.48A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+            </a>
+            <a class="icon-btn" href="https://www.linkedin.com/in/giovanni-marraffini/" target="_blank" rel="noopener" aria-label="LinkedIn" title="LinkedIn">
+              <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+            </a>
+          </div>
+        </div>
 
-			            <!-- Collect the nav links, forms, and other content for toggling -->
-			            <div class="collapse navbar-collapse menu-ui-design" id="navbar-menu">
-			                <ul class="nav navbar-nav navbar-right" data-in="fadeInDown" data-out="fadeOutUp">
-			                <li class=" smooth-menu active"></li>
-			                    <li class=" smooth-menu"><a href="#Conferences">Conferences</a></li>
-			                    <li class=" smooth-menu"><a href="#education">education</a></li>
-			                    <li class="smooth-menu"><a href="#experience">experience</a></li>
-			                    <li class="smooth-menu"><a href="#Technologies">Technologies</a></li>
-			                    <li class="smooth-menu"><a href="#contact">contact</a></li>
-			                </ul><!--/.nav -->
-			            </div><!-- /.navbar-collapse -->
-			        </div><!--/.container-->
-			    </nav><!--/nav-->
-			    <!-- End Navigation -->
-			</div><!--/.header-area-->
+        <div class="hero-portrait reveal">
+          <img src="assets/images/about/profile_image.jpg" alt="Giovanni Marraffini">
+        </div>
+      </div>
 
-		    <div class="clearfix"></div>
+      <div class="stats reveal">
+        <div class="stat"><div class="num">7</div><div class="lbl">Papers &amp; preprints</div></div>
+        <div class="stat"><div class="num">ACL · EMNLP · NeurIPS · ICML</div><div class="lbl">Publication venues</div></div>
+        <div class="stat"><div class="num">Paris</div><div class="lbl">Currently based in France</div></div>
+      </div>
+    </section>
 
-		</header><!-- /.top-area-->
-		<!-- top-area End -->
-	
-		<!--welcome-hero start -->
-		<section id="welcome-hero" class="welcome-hero">
-			<div class="container">
-				<div class="row">
-					<div class="col-md-12 text-center">
-						<div class="header-text">
-							<h2>hi <span>,</span> I am <br> Giovanni <br> Marraffini <span>.</span>   </h2>
-							<p>AI Engineer - NLP Researcher</p>
-							<a href="assets/download/Giovanni_Marraffini_Resume.pdf" download>download resume</a>
-						</div><!--/.header-text-->
-					</div><!--/.col-->
-				</div><!-- /.row-->
-			</div><!-- /.container-->
+    <!-- ============ About ============ -->
+    <section id="about">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="overline">About</p>
+          <h2>Research at the intersection of AI and the mind</h2>
+        </div>
+        <div class="about-grid">
+          <div class="reveal">
+            <p class="about-lead">I am a PhD candidate at INRIA and Université Paris-Saclay, working at the intersection of AI and cognition — spanning AI safety and interpretability, large language models, and computational neuroscience.</p>
+            <p class="about-body">My current work pretrains and evaluates foundation models on large-scale brain data (fMRI and EEG) to understand how machine and biological representations relate. Across my research I study how models represent and reason about the world — from alignment and moral judgment to causal biases in LLMs, mechanistic interpretability, and the correspondence between AI representations and the human brain. I care about building rigorous, reproducible work that bridges large language models, brain data, and the study of the mind.</p>
+          </div>
+          <div class="interests reveal">
+            <h3>Research interests</h3>
+            <div class="chips">
+              <span class="chip accent">AI safety</span>
+              <span class="chip accent">Mechanistic interpretability</span>
+              <span class="chip">LLM alignment</span>
+              <span class="chip">Causality in LLMs</span>
+              <span class="chip">Foundation models</span>
+              <span class="chip">AI–brain representations</span>
+              <span class="chip">Computational neuroscience</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		</section><!--/.welcome-hero-->
-		<!--welcome-hero end -->
+    <!-- ============ Publications ============ -->
+    <section id="publications">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="overline">Publications</p>
+          <h2>Selected papers</h2>
+          <p class="lede">Full list on <a href="https://scholar.google.com/citations?user=EeGGmbQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>. Names in bold indicate my authorship.</p>
+        </div>
+        <div class="pub-list">
 
-		<!--about start -->
-		<section id="about" class="about">
-			<div class="section-heading text-center">
-				<h2>about me</h2>
-			</div>
-			<div class="container">
-				<div class="about-content">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="single-about-txt">
-								<h3>
-									I am a professional AI Engineer and NLP Researcher. I am a passionate Data Scientist and AI Engineer specializing in machine learning, data analysis, and NLP.
-								</h3>
-								<p>
-									Experienced in developing scalable data-driven solutions, I am dedicated to leveraging artificial intelligence to solve real-world problems. My expertise includes advanced predictive modeling, neural networks, and deep learning.
-								</p>
-								<div class="row">
-									<!-- <div class="col-sm-4">
-										<div class="single-about-add-info">
-											<h3>phone</h3>
-											<p>987-123-6547</p>
-										</div>
-									</div> -->
-									<div class="col-sm-6">
-										<div class="single-about-add-info">
-											<h3>email</h3>
-											<p>giovanni.marraffini@gmail.com</p>
-										</div>
-									</div>
-									<div class="col-sm-6">
-										<div class="single-about-add-info">
-											<h3>website</h3>
-											<p>www.giovannimarraffini.com</p>
-										</div>
-									</div>
-								</div>
-							</div>
-						</div>
-						<div class="col-sm-offset-1 col-sm-5">
-							<div class="single-about-img">
-								<img src="assets/images/about/profile_image.jpg" alt="profile_image">
-								<div class="about-list-icon">
-									<ul>
-											
-										</li><!-- / li -->
-										<li>
-											<a href="https://www.linkedin.com/in/giovanni-marraffini/">
-												<i  class="fa fa-linkedin" aria-hidden="true"></i>
-											</a>
-										</li><!-- / li -->
-										<li>
-											<a href="https://www.instagram.com/gio.marraffini/">
-												<i  class="fa fa-instagram" aria-hidden="true"></i>
-											</a>
-										</li><!-- / li -->
-										
-										
-									</ul><!-- / ul -->
-								</div><!-- /.about-list-icon -->
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <div class="pub-venue">Preprint</div>
+              <div class="pub-sub">Under review</div>
+              <div class="pub-year">2026</div>
+            </div>
+            <div>
+              <h3 class="pub-title">The Variance Brain Foundation Models Forgot: Third-Order Statistics Predict Cognition Where Billion-Parameter Models Fail</h3>
+              <p class="pub-authors"><span class="me">Marraffini, G.</span>, Mahuas, G., Borrell, T., Shevchenko, V., Wassermann, D.</p>
+              <p class="pub-desc">First comprehensive benchmarking of fMRI foundation models, showing that third-order statistics predict cognition where billion-parameter models fail.</p>
+              <div class="pub-links">
+                <a class="tag" href="https://arxiv.org/abs/2606.04010" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
 
-							</div>
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <div class="pub-venue">ICML 2026</div>
+              <div class="pub-sub">Mech. Interp. Workshop</div>
+              <div class="pub-year">2026</div>
+            </div>
+            <div>
+              <h3 class="pub-title">The Platonic Universe: Do Foundation Models See the Same Sky?</h3>
+              <p class="pub-authors">Borrell, T., Dillmann, S., Duraphe, K., Eris, F., Khederlarian, A., Kumar, A., <span class="me">Marraffini, G.</span>, Smith, M. J., Sourav, S., Di Tella, R., Wu, J. F.</p>
+              <p class="pub-desc">Tests the Platonic Representation Hypothesis in astronomy — probing whether foundation models trained on different data converge toward a shared internal representation of the world.</p>
+              <div class="pub-links">
+                <a class="tag" href="https://openreview.net/forum?id=QzapekDazG" target="_blank" rel="noopener">OpenReview</a>
+                <a class="tag" href="https://github.com/UniverseTBD/platonic-universe" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
 
-						</div>
-					</div>
-				</div>
-			</div>
-		</section><!--/.about-->
-		<!--about end -->
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <div class="pub-venue">Preprint</div>
+              <div class="pub-sub">bioRxiv</div>
+              <div class="pub-year">2025</div>
+            </div>
+            <div>
+              <h3 class="pub-title">Shared Hierarchical Representations Explain Temporal Correspondence Between Brain Activity and Deep Neural Networks</h3>
+              <p class="pub-authors">Holm, E. L., <span class="me">Marraffini, G.</span>, Fernández Slezak, D., Tagliazucchi, E.</p>
+              <p class="pub-desc">Shows that shared hierarchical representations explain the temporal correspondence between human EEG activity and deep neural networks during visual perception — early components track low-level features, later ones semantic content.</p>
+              <div class="pub-links">
+                <a class="tag" href="https://www.biorxiv.org/content/10.1101/2025.05.19.655003v2" target="_blank" rel="noopener">bioRxiv</a>
+              </div>
+            </div>
+          </article>
 
-				<!--Conferences start -->
-				<section id="Conferences" class="experience">
-					<div class="section-heading text-center">
-						<h2>Conferences</h2>
-					</div>
-					<div class="container">
-						<div class="experience-content">
-							<div class="main-timeline">
-								<ul>
-									<li>
-										<div class="single-timeline-box fix">
-											<div class="row">
-												<div class="col-md-5">
-													<div class="experience-time text-right">
-														<h2>Mar 2025</h2>
-														<h3>Poster presentation in main conference</h3>
-													</div><!--/.experience-time-->
-												</div><!--/.col-->
-												<div class="col-md-offset-1 col-md-5">
-													<div class="timeline">
-														<div class="timeline-content">
-															<h4 class="title">
-																<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-																KHIPU 2025
-															</h4>
-															<h5>Santiago, Chile</h5>
-															<p class="description">
-																Temporal correspondence of visual processing of rapid stimuli between the human brain and artificial neural network architectures.
-															</p>
-														</div><!--/.timeline-content-->
-													</div><!--/.timeline-->
-												</div><!--/.col-->
-											</div>
-										</div><!--/.single-timeline-box-->
-									</li>
-									<li>
-										<div class="single-timeline-box fix">
-											<div class="row">
-												<div class="col-md-5">
-													<div class="experience-time text-right">
-														<h2>Nov 2024</h2>
-														<h3>Main conference paper</h3>
-													</div><!--/.experience-time-->
-												</div><!--/.col-->
-												<div class="col-md-offset-1 col-md-5">
-													<div class="timeline">
-														<div class="timeline-content">
-															<h4 class="title">
-																<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-																EMNLP 2024
-															</h4>
-															<h5>Miami, Florida</h5>
-															<p class="description">
-																Benchmark and framework for studying moral alignment in LLMs.
-															</p>
-														</div><!--/.timeline-content-->
-													</div><!--/.timeline-->
-												</div><!--/.col-->
-											</div>
-										</div><!--/.single-timeline-box-->
-									</li>
-									
-									<li>
-										<div class="single-timeline-box fix">
-											<div class="row">
-												<div class="col-md-5">
-													<div class="experience-time text-right">
-														<h2>Oct 2024</h2>
-														<h3>Poster presentation in main conference</h3>
-													</div><!--/.experience-time-->
-												</div><!--/.col-->
-												<div class="col-md-offset-1 col-md-5">
-													<div class="timeline">
-														<div class="timeline-content">
-															<h4 class="title">
-																<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-																SAN2024 (Sociedad Argentina de Investigación en Neurociencias)
-															</h4>
-															<h5>Buenos Aires, Argentina</h5>
-															<p class="description">
-																Temporal Correspondence Between Human Brain and Vision Transformers in Rapid Stimuli Tasks
-															</p>
-														</div><!--/.timeline-content-->
-													</div><!--/.timeline-->
-												</div><!--/.col-->
-											</div>
-										</div><!--/.single-timeline-box-->
-									</li>		
-									<li>
-										<div class="single-timeline-box fix">
-											<div class="row">
-												<div class="col-md-5">
-													<div class="experience-time text-right">
-														<h2>Sep 2024</h2>
-														<h3>Poster presentation in main conference</h3>
-													</div><!--/.experience-time-->
-												</div><!--/.col-->
-												<div class="col-md-offset-1 col-md-5">
-													<div class="timeline">
-														<div class="timeline-content">
-															<h4 class="title">
-																<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-																I Congreso Argentino de Ciencias Cognitivas
-															</h4>
-															<h5>Buenos Aires, Argentina</h5>
-															<p class="description">
-																Model of rapid visual stimulus processing between the human brain based on attention mechanisms
-															</p>
-														</div><!--/.timeline-content-->
-													</div><!--/.timeline-->
-												</div><!--/.col-->
-											</div>
-										</div><!--/.single-timeline-box-->
-									</li>
-									
-									<li>
-										<div class="single-timeline-box fix">
-											<div class="row">
-												<div class="col-md-5">
-													<div class="experience-time text-right">
-														<h2>Dec 2022</h2>
-														<h3>Staff</h3>
-													</div><!--/.experience-time-->
-												</div><!--/.col-->
-												<div class="col-md-offset-1 col-md-5">
-													<div class="timeline">
-														<div class="timeline-content">
-															<h4 class="title">
-																<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-																CLAIO 2022
-															</h4>
-															<h5>Buenos Aires, Argentina</h5>
-															<p class="description">
-																Volunteered as staff to assist with the conference in any capacity needed.
-															</p>
-														</div><!--/.timeline-content-->
-													</div><!--/.timeline-->
-												</div><!--/.col-->
-											</div>
-										</div><!--/.single-timeline-box-->
-									</li>
-								</ul>
-							</div><!--.main-timeline-->
-						</div><!--.experience-content-->
-					</div>
-				</section><!--/.experience-->
-				<!--experience end -->
-		
-		<!--education start -->
-		<section id="education" class="education">
-			<div class="section-heading text-center">
-				<h2>education</h2>
-			</div>
-			<div class="container">
-				<div class="education-horizontal-timeline">
-					<div class="row">
-						<div class="col-sm-6">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2022 - 2024</h2>
-									<h3>Master <span>in </span> Data Science</h3>
-								</div><!--/.experience-time-->
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											Universidad de Buenos Aires
-										</h4>
-										<h5>Buenos Aires, Argentina</h5>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-							</div>
-						</div>
-						<div class="col-sm-6">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2019 - 2022</h2>
-									<h3>Bachelor <span>in </span> Data Science</h3>
-								</div><!--/.experience-time-->
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											Universidad de Buenos Aires
-										</h4>
-										<h5>Buenos Aires, Argentina</h5>
-									</div><!--/.timeline-content-->
-								</div><!--/.timeline-->
-							</div>
-						</div>
-						<!-- <div class="col-sm-4">
-							<div class="single-horizontal-timeline">
-								<div class="experience-time">
-									<h2>2004 - 2008</h2>
-									<h3>bachelor <span>of </span> creative design</h3>
-								</div>
-								<div class="timeline-horizontal-border">
-									<i class="fa fa-circle" aria-hidden="true"></i>
-									<span class="single-timeline-horizontal spacial-horizontal-line
-									"></span>
-								</div>
-								<div class="timeline">
-									<div class="timeline-content">
-										<h4 class="title">
-											university of bolton
-										</h4>
-										<h5>bolton, united kingdome</h5>
-									</div>
-								</div>
-							</div>
-						</div> -->
-					</div>
-				</div>
-			</div>
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <div class="pub-venue">NeurIPS 2025</div>
+              <div class="pub-sub">CogInterp Workshop</div>
+              <div class="pub-year">2025</div>
+            </div>
+            <div>
+              <h3 class="pub-title">Do Large Language Models Show Biases in Causal Learning? Insights from Contingency Judgment</h3>
+              <p class="pub-authors">Carro, M., Mester, D., Gauna Selasco, F., <span class="me">Marraffini, G.</span>, Leiva, M., Simari, G., Martinez, V.</p>
+              <p class="pub-desc">Shows that LLMs systematically infer unwarranted causal relationships in null-contingency scenarios, mirroring a human cognitive bias.</p>
+              <div class="pub-links">
+                <a class="tag" href="https://arxiv.org/abs/2510.13985" target="_blank" rel="noopener">arXiv</a>
+              </div>
+            </div>
+          </article>
 
-		</section><!--/.education-->
-		<!--education end -->
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <div class="pub-venue">ACL 2025</div>
+              <div class="pub-sub">Main Conference</div>
+              <div class="pub-year">2025</div>
+            </div>
+            <div>
+              <h3 class="pub-title">Are Optimal Algorithms Still Optimal? Rethinking Sorting in LLM-Based Pairwise Ranking with Batching and Caching</h3>
+              <p class="pub-authors">Wisznia, J., Bolaños, C., Gianolini, A., Hsueh, N., <span class="me">Marraffini, G.</span>, Tollo, J., Del Corro, L.</p>
+              <p class="pub-desc">Rethinks sorting algorithms for LLM-based pairwise ranking, using batching and caching to cut cost while preserving ranking quality.</p>
+              <div class="pub-links">
+                <a class="tag" href="https://aclanthology.org/2025.acl-short.83/" target="_blank" rel="noopener">ACL Anthology</a>
+              </div>
+            </div>
+          </article>
 
-		
-		<!--experience start -->
-		<section id="experience" class="experience">
-			<div class="section-heading text-center">
-				<h2>experience</h2>
-			</div>
-			<div class="container">
-				<div class="experience-content">
-					<div class="main-timeline">
-						<ul>
-							<li>
-								<div class="single-timeline-box fix">
-									<div class="row">
-										<div class="col-md-5">
-											<div class="experience-time text-right">
-												<h2>Aug 2024 - Present</h2>
-												<h3>Graduate Teaching Fellow</h3>
-											</div><!--/.experience-time-->
-										</div><!--/.col-->
-										<div class="col-md-offset-1 col-md-5">
-											<div class="timeline">
-												<div class="timeline-content">
-													<h4 class="title">
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														Universidad de Buenos Aires
-													</h4>
-													<h5>Provincia de Buenos Aires, Argentina</h5>
-													<p class="description">
-														Teaching Graph Theory, Algorithm Design, operations research.
-													</p>
-												</div><!--/.timeline-content-->
-											</div><!--/.timeline-->
-										</div><!--/.col-->
-									</div>
-								</div><!--/.single-timeline-box-->
-							</li>
-							
-							<li>
-								<div class="single-timeline-box fix">
-									<div class="row">
-										<div class="col-md-5">
-											<div class="experience-time text-right">
-												<h2>Feb 2024 - Present</h2>
-												<h3>Research Assistant</h3>
-											</div><!--/.experience-time-->
-										</div><!--/.col-->
-										<div class="col-md-offset-1 col-md-5">
-											<div class="timeline">
-												<div class="timeline-content">
-													<h4 class="title">
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														Universidad de Buenos Aires
-													</h4>
-													<h5>Buenos Aires Province, Argentina</h5>
-													<p class="description">
-														Conducting research at the intersection of Neuroscience and Natural Language Processing (NLP), with a focus on algorithm development.
-													</p>
-												</div><!--/.timeline-content-->
-											</div><!--/.timeline-->
-										</div><!--/.col-->
-									</div>
-								</div><!--/.single-timeline-box-->
-							</li>
+          <article class="pub reveal">
+            <div class="pub-meta">
+              <div class="pub-venue">EMNLP 2024</div>
+              <div class="pub-sub">Main Conference</div>
+              <div class="pub-year">2024</div>
+            </div>
+            <div>
+              <h3 class="pub-title">The Greatest Good Benchmark: Measuring LLMs' Alignment with Utilitarian Moral Dilemmas</h3>
+              <p class="pub-authors"><span class="me">Marraffini, G.</span>, Cotton, A., Hsueh, N., Wisznia, J., Fridman, A., Del Corro, L.</p>
+              <p class="pub-desc">A benchmark measuring how LLMs' moral judgments align with utilitarian dilemmas, revealing consistently encoded moral preferences across 15 models.</p>
+              <div class="pub-links">
+                <a class="tag" href="https://aclanthology.org/2024.emnlp-main.1224/" target="_blank" rel="noopener">ACL Anthology</a>
+                <a class="tag" href="https://arxiv.org/abs/2503.19598" target="_blank" rel="noopener">arXiv</a>
+                <a class="tag" href="https://github.com/noehsueh/greatest-good-benchmark" target="_blank" rel="noopener">Code</a>
+              </div>
+            </div>
+          </article>
 
-							<li>
-								<div class="single-timeline-box fix">
-									<div class="row">
-										<div class="col-md-5">
-											<div class="experience-time text-right">
-												<h2>Dec 2023 - Present</h2>
-												<h3>Natural Language Processing Engineer</h3>
-											</div><!--/.experience-time-->
-										</div><!--/.col-->
-										<div class="col-md-offset-1 col-md-5">
-											<div class="timeline">
-												<div class="timeline-content">
-													<h4 class="title">
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														Lumina Labs
-													</h4>
-													<h5>Argentina (Hybrid)</h5>
-													<p class="description">
-														Working on Retrieval-Augmented Generation (RAG) and advanced Natural Language Processing techniques.
-													</p>
-												</div><!--/.timeline-content-->
-											</div><!--/.timeline-->
-										</div><!--/.col-->
-									</div>
-								</div><!--/.single-timeline-box-->
-							</li>
+        </div>
+      </div>
+    </section>
 
-							<li>
-								<div class="single-timeline-box fix">
-									<div class="row">
-										<div class="col-md-5">
-											<div class="experience-time text-right">
-												<h2>Jun 2024 - Sept 2024</h2>
-												<h3>Teaching Assistant </h3>
-											</div><!--/.experience-time-->
-										</div><!--/.col-->
-										<div class="col-md-offset-1 col-md-5">
-											<div class="timeline">
-												<div class="timeline-content">
-													<h4 class="title">
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														Universidad de Buenos Aires
-													</h4>
-													<h5>Argentina</h5>
-													<p class="description">
-														Assisted in teaching subjects including Algorithm Design and Graph Theory to undergraduate students.
-													</p>
-												</div><!--/.timeline-content-->
-											</div><!--/.timeline-->
-										</div><!--/.col-->
-									</div>
-								</div><!--/.single-timeline-box-->
-							</li>
+    <!-- ============ Experience ============ -->
+    <section id="experience">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="overline">Experience</p>
+          <h2>Research, industry &amp; teaching</h2>
+        </div>
+        <div class="timeline">
 
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">PhD Candidate</span><span class="tl-org">INRIA · Université Paris-Saclay</span><span class="tl-date">Mar 2026 — Present</span></div>
+            <div class="tl-place">Paris, France</div>
+            <p class="tl-desc">Foundation-model pretraining and evaluation for understanding cognition. First comprehensive benchmarking of fMRI foundation models, probing whether internal representations retain cognitively relevant variance, then fine-tuning to recover a reconstruction-vs-representation trade-off.</p>
+          </div>
 
-							<li>
-								<div class="single-timeline-box fix">
-									<div class="row">
-										<div class="col-md-5">
-											<div class="experience-time text-right">
-												<h2>Jul 2023 - Aug 2024</h2>
-												<h3>Artificial Intelligence Engineer</h3>
-											</div><!--/.experience-time-->
-										</div><!--/.col-->
-										<div class="col-md-offset-1 col-md-5">
-											<div class="timeline">
-												<div class="timeline-content">
-													<h4 class="title">
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														Ubatec S.A.
-													</h4>
-													<h5>Buenos Aires, Argentina</h5>
-													<p class="description">
-														Developed AI solutions, focusing on data analysis, deep learning, and optimizing machine learning processes for various projects.
-													</p>
-												</div><!--/.timeline-content-->
-											</div><!--/.timeline-->
-										</div><!--/.col-->
-									</div>
-								</div><!--/.single-timeline-box-->
-							</li>
-							
-							<li>
-								<div class="single-timeline-box fix">
-									<div class="row">
-										<div class="col-md-5">
-											<div class="experience-time text-right">
-												<h2>Mar 2023 - Aug 2024</h2>
-												<h3>Teaching Assistant</h3>
-											</div><!--/.experience-time-->
-										</div><!--/.col-->
-										<div class="col-md-offset-1 col-md-5">
-											<div class="timeline">
-												<div class="timeline-content">
-													<h4 class="title">
-														<span><i class="fa fa-circle" aria-hidden="true"></i></span>
-														UNIVERSIDAD TORCUATO DI TELLA
-													</h4>
-													<h5>Buenos Aires, Argentina</h5>
-													<p class="description">
-														Teaching and mentoring students in topics related to Data Science and AI.
-													</p>
-												</div><!--/.timeline-content-->
-											</div><!--/.timeline-->
-										</div><!--/.col-->
-									</div>
-								</div><!--/.single-timeline-box-->
-							</li>
-							
-						</ul>
-					</div><!--.main-timeline-->
-				</div><!--.experience-content-->
-			</div>
-		</section><!--/.experience-->
-		<!--experience end -->
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">AI Consultant</span><span class="tl-org">Sigma Nova</span><span class="tl-date">Mar 2026 — Present</span></div>
+            <div class="tl-place">Paris, France</div>
+            <p class="tl-desc">Designed and maintained training and evaluation pipelines for large-scale fMRI foundation models on Scaleway clusters, managing experiment tracking, compute provisioning, and reproducibility tooling.</p>
+          </div>
 
-		<!--Technologies start -->
-		<section id="Technologies" class="Technologies">
-				<div class="skill-content">
-					<div class="section-heading text-center">
-						<h2>Technologies</h2>
-					</div>
-					<div class="container">
-						<div class="row">
-							<div class="col-md-6">
-								<div class="single-skill-content">
-									<div class="barWrapper">
-										<span class="progressText">Python</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													  
-												</div>
-											</div>
-											<h3>90%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Azure</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>85%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">OpenAI API</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100">
-												   
-											   </div>
-											</div>
-											<h3>97%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Langchain</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>85%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">R</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>90%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Julia</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>80%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Java</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>85%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-								</div>
-							</div>
-							<div class="col-md-6">
-								<div class="single-skill-content">
-									<div class="barWrapper">
-										<span class="progressText">SQL</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-												<div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													
-												</div>
-											</div>
-											<h3>90%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Pyserini</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="85" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>85%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Langsmith</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="97" aria-valuemin="10" aria-valuemax="100">
-												   
-											   </div>
-											</div>
-											<h3>97%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText"> Pytorch</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>80%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText"> C++</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>85%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">Haskell</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>85%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-									<div class="barWrapper">
-										<span class="progressText">C</span>
-										<div class="single-progress-txt">
-											<div class="progress ">
-											   <div class="progress-bar" role="progressbar" aria-valuenow="90" aria-valuemin="10" aria-valuemax="100">
-													
-											   </div>
-											</div>
-											<h3>85%</h3>	
-										</div>
-									</div><!-- /.barWrapper -->
-								</div>
-							</div>
-						</div><!-- /.row -->
-					</div>	<!-- /.container -->		
-				</div><!-- /.skill-content-->
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">Lead AI Instructor</span><span class="tl-org">Anyone AI</span><span class="tl-date">Mar 2026 — Present</span></div>
+            <div class="tl-place">Remote</div>
+            <p class="tl-desc">Helping software engineers transition into AI-centered careers by teaching the latest advances and industry best practices.</p>
+          </div>
 
-		</section><!--/.Technologies-->
-		<!--Technologies end -->
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">Research Engineer</span><span class="tl-org">Paris Brain Institute</span><span class="tl-date">May 2025 — Mar 2026</span></div>
+            <div class="tl-place">Paris, France</div>
+            <p class="tl-desc">Applied state-of-the-art time-series foundation models to analyze large-scale EEG data from patients with neurodegenerative diseases.</p>
+          </div>
 
-		<!--contact start -->
-		<section id="contact" class="contact">
-			<div class="section-heading text-center">
-				<h2>contact me</h2>
-			</div>
-			<div class="container">
-				<div class="contact-content">
-					<div class="row">
-						<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-form">
-									<form id="contactForm">
-										<div class="row">
-											<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-													<input type="text" class="form-control" id="name" placeholder="Name*" name="name" required>
-												</div>
-											</div>
-											<div class="col-sm-6 col-xs-12">
-												<div class="form-group">
-													<input type="email" class="form-control" id="email" placeholder="Email*" name="email" required>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<input type="text" class="form-control" id="subject" placeholder="Subject" name="subject">
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="form-group">
-													<textarea class="form-control" rows="8" id="message" placeholder="Message" name="message"></textarea>
-												</div>
-											</div>
-										</div>
-										<div class="row">
-											<div class="col-sm-12">
-												<div class="single-contact-btn">
-													<button type="button" class="contact-btn" onclick="sendEmail()">Submit</button>
-												</div>
-											</div>
-										</div>
-									</form>
-								</div>
-							</div>
-						</div>
-						<div class="col-md-offset-1 col-md-5 col-sm-6">
-							<div class="single-contact-box">
-								<div class="contact-adress">
-									<div class="contact-add-head">
-										<h3>Giovanni Marraffini</h3>
-										<p>NLP - Neuroscience researcher</p>
-									</div>
-									<div class="contact-add-info">
-										<div class="single-contact-add-info">
-											<h3>email</h3>
-											<p>giovanni.marraffini@gmail.com</p>
-										</div>
-										<div class="single-contact-add-info">
-											<h3>website</h3>
-											<p>www.giovannimarraffini.com</p>
-										</div>
-									</div>
-								</div><!--/.contact-adress-->
-								<div class="hm-foot-icon">
-									<ul>
-										<li><a href="https://www.linkedin.com/in/giovanni-marraffini/"><i class="fa fa-linkedin"></i></a></li><!--/li-->
-										<li><a href="https://www.instagram.com/gio.marraffini/"><i class="fa fa-instagram"></i></a></li><!--/li-->
-									</ul><!--/ul-->
-								</div><!--/.hm-foot-icon-->
-							</div><!--/.single-contact-box-->
-						</div><!--/.col-->
-					</div><!--/.row-->
-				</div><!--/.contact-content-->
-			</div><!--/.container-->
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">AI Developer</span><span class="tl-org">Data Voices</span><span class="tl-date">Apr 2025 — Dec 2025</span></div>
+            <div class="tl-place">Remote</div>
+            <p class="tl-desc">Developed and deployed AI solutions for international companies, from real-time conversational responses to large-scale text-document reorganization.</p>
+          </div>
 
-		</section><!--/.contact-->
-		<!--contact end -->
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">NLP Engineer</span><span class="tl-org">Lumina Labs</span><span class="tl-date">Dec 2023 — May 2025</span></div>
+            <div class="tl-place">Remote</div>
+            <p class="tl-desc">Built a multi-agent RAG pipeline for financial presentations, involving LLM fine-tuning, retrieval reranking, prompt engineering, and MLOps for deployment on Azure.</p>
+          </div>
 
-		<!--footer-copyright start-->
-		<footer id="footer-copyright" class="footer-copyright">
-			<div class="container">
-				<div class="hm-footer-copyright text-center">
-					<!-- <p>
-						&copy; 2024 Giovanni Marraffini. design and developed by <a href="https://www.giovannimarraffini.com/">Giovanni Marraffini</a>
-					</p> -->
-				</div><!--/.text-center-->
-			</div><!--/.container-->
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">Teaching Fellow</span><span class="tl-org">Universidad de Buenos Aires</span><span class="tl-date">Jun 2024 — Feb 2025</span></div>
+            <div class="tl-place">Buenos Aires, Argentina</div>
+            <p class="tl-desc">Taught introductory and advanced algorithms courses for Data Science and Computer Science students.</p>
+          </div>
 
-			<div id="scroll-Top">
-				<div class="return-to-top">
-					<i class="fa fa-angle-up " id="scroll-top" ></i>
-				</div>
-				
-			</div><!--/.scroll-Top-->
-			
-        </footer><!--/.footer-copyright-->
-		<!--footer-copyright end-->
-		
-		<!-- Include all js compiled plugins (below), or include individual files as needed -->
-		<script>
-			function sendEmail() {
-				// Get form values
-				var name = document.getElementById("name").value;
-				var email = document.getElementById("email").value;
-				var subject = document.getElementById("subject").value;
-				var message = document.getElementById("message").value;
-			
-				// Construct mailto link
-				var mailtoLink = "mailto:giovanni.marraffini@gmail.com" +
-								 "?subject=" + encodeURIComponent(subject) +
-								 "&body=" + encodeURIComponent("Name: " + name + "\nEmail: " + email + "\n\nMessage: " + message);
-			
-				// Open the mail client with the pre-filled email
-				window.location.href = mailtoLink;
-			}
-			</script>
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">Research Assistant</span><span class="tl-org">Universidad de Buenos Aires</span><span class="tl-date">Feb 2024 — Dec 2024</span></div>
+            <div class="tl-place">Buenos Aires, Argentina</div>
+            <p class="tl-desc">EEG–ViT comparison study: analyzed EEG data from subjects viewing images, comparing the timing of human visual processing with activation layers in Vision Transformers.</p>
+          </div>
 
-		<script src="assets/js/jquery.js"></script>
-        
-        <!--modernizr.min.js-->
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/modernizr/2.8.3/modernizr.min.js"></script>
-		
-		<!--bootstrap.min.js-->
-        <script src="assets/js/bootstrap.min.js"></script>
-		
-		<!-- bootsnav js -->
-		<script src="assets/js/bootsnav.js"></script>
-		
-		<!-- jquery.sticky.js -->
-		<script src="assets/js/jquery.sticky.js"></script>
-		
-		<!-- for progress bar start-->
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">Founder · Paper Reading Club</span><span class="tl-org">Universidad de Buenos Aires</span><span class="tl-date">Sep 2023 — Dec 2024</span></div>
+            <div class="tl-place">Buenos Aires, Argentina</div>
+            <p class="tl-desc">Founded and led a research paper reading club for data science and computer science students to stay current with the latest research.</p>
+          </div>
 
-		<!-- progressbar js -->
-		<script src="assets/js/progressbar.js"></script>
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">NLP Researcher</span><span class="tl-org">Universidad de Buenos Aires</span><span class="tl-date">Jun 2023 — Dec 2023</span></div>
+            <div class="tl-place">Buenos Aires, Argentina</div>
+            <p class="tl-desc">Researched the impact of large language models on job roles and employment for the Ministry of Labour.</p>
+          </div>
 
-		<!-- appear js -->
-		<script src="assets/js/jquery.appear.js"></script>
+          <div class="tl-item reveal">
+            <div class="tl-top"><span class="tl-role">Teaching Assistant</span><span class="tl-org">Universidad Torcuato Di Tella</span><span class="tl-date">Mar 2023 — Aug 2024</span></div>
+            <div class="tl-place">Buenos Aires, Argentina</div>
+            <p class="tl-desc">Taught Graph Theory and Computational Business Applications.</p>
+          </div>
 
-		<!-- for progress bar end -->
+        </div>
+      </div>
+    </section>
 
-		<!--owl.carousel.js-->
-        <script src="assets/js/owl.carousel.min.js"></script>
+    <!-- ============ Education ============ -->
+    <section id="education">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="overline">Education</p>
+          <h2>Academic background</h2>
+        </div>
+        <div class="grid cols-3">
+          <div class="card reveal">
+            <div class="date">2026 — Present</div>
+            <h3>PhD in Computational Neuroscience</h3>
+            <div class="sub">Université Paris-Saclay</div>
+            <div class="place">Paris, France</div>
+          </div>
+          <div class="card reveal">
+            <div class="date">2022 — 2024</div>
+            <h3>MSc in Data Science</h3>
+            <div class="sub">Universidad de Buenos Aires</div>
+            <div class="place">Buenos Aires, Argentina</div>
+            <span class="badge">GPA 9.30 / 10</span>
+          </div>
+          <div class="card reveal">
+            <div class="date">2019 — 2022</div>
+            <h3>BSc in Data Science</h3>
+            <div class="sub">Universidad de Buenos Aires</div>
+            <div class="place">Buenos Aires, Argentina</div>
+            <span class="badge">GPA 8.75 / 10</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
+    <!-- ============ Conferences ============ -->
+    <section id="conferences">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="overline">Conferences</p>
+          <h2>Talks &amp; presentations</h2>
+        </div>
+        <div class="grid cols-3">
+          <div class="card reveal">
+            <div class="date">Jul 2026</div>
+            <h3>ICML 2026</h3>
+            <div class="sub">Mechanistic Interpretability Workshop</div>
+            <div class="place">Seoul, South Korea</div>
+            <span class="badge">Workshop paper</span>
+          </div>
+          <div class="card reveal">
+            <div class="date">Jun 2026</div>
+            <h3>OHBM 2026</h3>
+            <div class="sub">Organization for Human Brain Mapping</div>
+            <div class="place">Bordeaux, France</div>
+            <span class="badge">Poster</span>
+          </div>
+          <div class="card reveal">
+            <div class="date">Dec 2025</div>
+            <h3>NeurIPS 2025</h3>
+            <div class="sub">Neural Information Processing Systems</div>
+            <div class="place">San Diego, California</div>
+            <span class="badge">2 accepted papers</span>
+          </div>
+          <div class="card reveal">
+            <div class="date">Jul 2025</div>
+            <h3>ACL 2025</h3>
+            <div class="sub">Assoc. for Computational Linguistics</div>
+            <div class="place">Vienna, Austria</div>
+            <span class="badge">Main conference</span>
+          </div>
+          <div class="card reveal">
+            <div class="date">Mar 2025</div>
+            <h3>KHIPU 2025</h3>
+            <div class="sub">Latin American Meeting in AI</div>
+            <div class="place">Santiago, Chile</div>
+            <span class="badge">Poster</span>
+          </div>
+          <div class="card reveal">
+            <div class="date">Nov 2024</div>
+            <h3>EMNLP 2024</h3>
+            <div class="sub">Empirical Methods in NLP</div>
+            <div class="place">Miami, Florida</div>
+            <span class="badge">Main conference</span>
+          </div>
+          <div class="card reveal">
+            <div class="date">Oct 2024</div>
+            <h3>SAN 2024</h3>
+            <div class="sub">Sociedad Argentina de Neurociencias</div>
+            <div class="place">Buenos Aires, Argentina</div>
+            <span class="badge">Poster</span>
+          </div>
+        </div>
+      </div>
+    </section>
 
-		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-easing/1.4.1/jquery.easing.min.js"></script>
-		
-        
-        <!--Custom JS-->
-        <script src="assets/js/custom.js"></script>
-        
-    </body>
-	
+    <!-- ============ Skills ============ -->
+    <section id="skills">
+      <div class="container">
+        <div class="section-head reveal">
+          <p class="overline">Skills</p>
+          <h2>Technologies &amp; tools</h2>
+        </div>
+        <div class="skills-grid">
+          <div class="skill-group reveal">
+            <h3>Machine Learning</h3>
+            <div class="chips">
+              <span class="chip">Foundation-model pretraining</span>
+              <span class="chip">LLM fine-tuning</span>
+              <span class="chip">Mechanistic interpretability</span>
+              <span class="chip">AI safety &amp; alignment</span>
+              <span class="chip">RAG</span>
+              <span class="chip">Prompt engineering</span>
+              <span class="chip">Transformers</span>
+              <span class="chip">Vision Transformers</span>
+              <span class="chip">Representation learning</span>
+              <span class="chip">Optimization</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Languages &amp; Frameworks</h3>
+            <div class="chips">
+              <span class="chip">Python</span>
+              <span class="chip">PyTorch</span>
+              <span class="chip">HuggingFace</span>
+              <span class="chip">LangChain</span>
+              <span class="chip">LangSmith</span>
+              <span class="chip">MNE · Nilearn</span>
+              <span class="chip">fmriprep</span>
+              <span class="chip">C++</span>
+              <span class="chip">R</span>
+              <span class="chip">SQL</span>
+              <span class="chip">Azure</span>
+            </div>
+          </div>
+          <div class="skill-group reveal">
+            <h3>Languages (spoken)</h3>
+            <div class="chips">
+              <span class="chip accent">Spanish — Native</span>
+              <span class="chip accent">English — Proficient</span>
+              <span class="chip accent">French — Intermediate</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ Contact ============ -->
+    <section id="contact" class="contact">
+      <div class="container contact-inner">
+        <div class="reveal">
+          <p class="overline">Contact</p>
+          <h2>Let's get in touch</h2>
+          <p>Open to research collaborations, talks, and interesting problems at the intersection of AI and cognition. The fastest way to reach me is by email.</p>
+          <div class="contact-actions">
+            <a class="btn btn-primary" href="mailto:giovanni.marraffini@gmail.com">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+              giovanni.marraffini@gmail.com
+            </a>
+            <a class="btn btn-ghost" href="https://scholar.google.com/citations?user=EeGGmbQAAAAJ" target="_blank" rel="noopener">Google Scholar</a>
+            <a class="btn btn-ghost" href="https://github.com/GioMarraffini" target="_blank" rel="noopener">GitHub</a>
+            <a class="btn btn-ghost" href="https://www.linkedin.com/in/giovanni-marraffini/" target="_blank" rel="noopener">LinkedIn</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ============ Footer ============ -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <p>© <span id="year">2026</span> Giovanni Marraffini · Built &amp; designed by Giovanni Marraffini</p>
+      <div class="footer-socials">
+        <a class="icon-btn" href="https://scholar.google.com/citations?user=EeGGmbQAAAAJ" target="_blank" rel="noopener" aria-label="Google Scholar">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 3 1 9l11 6 9-4.91V17h2V9L12 3zM5 13.18v3.5L12 21l7-4.32v-3.5L12 17l-7-3.82z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://github.com/GioMarraffini" target="_blank" rel="noopener" aria-label="GitHub">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M12 2C6.48 2 2 6.58 2 12.25c0 4.53 2.87 8.37 6.84 9.73.5.1.68-.22.68-.48v-1.7c-2.78.62-3.37-1.37-3.37-1.37-.45-1.18-1.11-1.5-1.11-1.5-.91-.63.07-.62.07-.62 1 .07 1.53 1.06 1.53 1.06.89 1.56 2.34 1.11 2.91.85.09-.66.35-1.11.63-1.36-2.22-.26-4.56-1.14-4.56-5.07 0-1.12.39-2.03 1.03-2.75-.1-.26-.45-1.3.1-2.71 0 0 .84-.28 2.75 1.05a9.34 9.34 0 0 1 5 0c1.91-1.33 2.75-1.05 2.75-1.05.55 1.41.2 2.45.1 2.71.64.72 1.03 1.63 1.03 2.75 0 3.94-2.34 4.81-4.57 5.06.36.32.68.94.68 1.9v2.82c0 .27.18.59.69.48A10.26 10.26 0 0 0 22 12.25C22 6.58 17.52 2 12 2z"/></svg>
+        </a>
+        <a class="icon-btn" href="https://www.linkedin.com/in/giovanni-marraffini/" target="_blank" rel="noopener" aria-label="LinkedIn">
+          <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20.45 20.45h-3.56v-5.57c0-1.33-.02-3.04-1.85-3.04-1.85 0-2.14 1.45-2.14 2.94v5.67H9.35V9h3.42v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.46v6.28zM5.34 7.43a2.07 2.07 0 1 1 0-4.14 2.07 2.07 0 0 1 0 4.14zM7.12 20.45H3.56V9h3.56v11.45zM22.22 0H1.77C.79 0 0 .77 0 1.72v20.56C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.72V1.72C24 .77 23.2 0 22.22 0z"/></svg>
+        </a>
+        <a class="icon-btn" href="mailto:giovanni.marraffini@gmail.com" aria-label="Email">
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="5" width="18" height="14" rx="2"/><path d="m3 7 9 6 9-6"/></svg>
+        </a>
+      </div>
+    </div>
+  </footer>
+
+  <!-- ============ Scripts ============ -->
+  <script>
+    (function () {
+      var header = document.getElementById('site-header');
+      var toggle = document.getElementById('nav-toggle');
+      var links  = document.getElementById('nav-links');
+      var navAnchors = Array.prototype.slice.call(links.querySelectorAll('a'));
+
+      // sticky header shadow
+      var onScroll = function () { header.classList.toggle('scrolled', window.scrollY > 8); };
+      onScroll();
+      window.addEventListener('scroll', onScroll, { passive: true });
+
+      // mobile menu
+      toggle.addEventListener('click', function () {
+        var open = links.classList.toggle('open');
+        toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+      });
+      navAnchors.forEach(function (a) {
+        a.addEventListener('click', function () { links.classList.remove('open'); toggle.setAttribute('aria-expanded', 'false'); });
+      });
+
+      // reveal on scroll
+      var reveals = document.querySelectorAll('.reveal');
+      if ('IntersectionObserver' in window) {
+        var io = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) { if (e.isIntersecting) { e.target.classList.add('in'); io.unobserve(e.target); } });
+        }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
+        reveals.forEach(function (el) { io.observe(el); });
+      } else {
+        reveals.forEach(function (el) { el.classList.add('in'); });
+      }
+
+      // active nav link via section observation
+      var sections = navAnchors.map(function (a) { return document.querySelector(a.getAttribute('href')); }).filter(Boolean);
+      if ('IntersectionObserver' in window) {
+        var spy = new IntersectionObserver(function (entries) {
+          entries.forEach(function (e) {
+            if (e.isIntersecting) {
+              navAnchors.forEach(function (a) { a.classList.toggle('active', a.getAttribute('href') === '#' + e.target.id); });
+            }
+          });
+        }, { rootMargin: '-45% 0px -50% 0px' });
+        sections.forEach(function (s) { spy.observe(s); });
+      }
+    })();
+  </script>
+
+</body>
 </html>
